@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+<main id="app"></main>
+<main id="app2"></main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.22.1/babel.js"></script>
+<script type="text/babel">
+	function Hola(props) {
+		const name = props.name;
+
+		return React.DOM.h1({
+			id: 'Title',
+		}, `Hola ${name}`);
+	}
+
+	function Hola2(props) {
+		const name = props.name;
+
+		return (
+			<h1 id="Title">
+				Hola2 {name}
+			</h1>
+		);
+	}
+
+	const hola = React.createElement(Hola, {
+		name: 'Platzi',
+	});
+
+	ReactDOM.render(
+		hola,
+		document.getElementById('app')
+	);
+	
+	ReactDOM.render(
+		<Hola2 name="Platzi2" />,
+		document.getElementById('app2')
+	);
+</script>
+
+
+</body>
+</html>
