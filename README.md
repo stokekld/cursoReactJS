@@ -17,3 +17,7 @@ su -c "npm install webpack -g"
 webpack
 
 node built/server/index.js
+
+### Rutas
+
+npm i -S react-router@next
